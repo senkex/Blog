@@ -1,0 +1,230 @@
+*{box-sizing:border-box}
+
+:root{
+    --glass:rgba(255,255,255,.14);
+    --border:rgba(255,255,255,.22);
+    --blur:blur(32px);
+    --ease:cubic-bezier(.22,1,.36,1);
+    --soft-line:rgba(255,255,255,.08);
+}
+
+body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+    color:white;
+    background:black;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.bg-wrapper{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+}
+#mesh{
+    width:100%;
+    height:100%;
+    filter:blur(55px) saturate(170%);
+    transform:scale(1.25);
+}
+.dark-overlay{
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at top,rgba(0,0,0,.25),rgba(0,0,0,.92));
+}
+
+.top-bar{
+    position:fixed;
+    top:18px;
+    left:18px;
+    right:18px;
+    display:flex;
+    justify-content:space-between;
+    z-index:30;
+}
+
+.icon-btn{
+    width:42px;
+    height:42px;
+    border-radius:14px;
+    background:var(--glass);
+    backdrop-filter:var(--blur);
+    border:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s var(--ease);
+    cursor:pointer;
+}
+.icon-btn:hover{
+    transform:scale(1.08);
+    background:rgba(255,255,255,.22);
+}
+.icon-btn img{width:20px}
+
+.center{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.brand{
+    margin-top:96px;
+    margin-bottom:56px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+    position:relative;
+    z-index:5;
+}
+.brand img{
+    width:90px;
+    border-radius:24px;
+}
+.brand h1{
+    font-size:42px;
+    margin:0;
+}
+
+.icons{
+    display:flex;
+    gap:14px;
+}
+.icons img{
+    width:36px;
+    border-radius:12px;
+    transition:.25s var(--ease);
+    cursor:pointer;
+    pointer-events:auto;
+    z-index:10;
+}
+.icons img:hover{
+    transform:translateY(-3px) scale(1.08);
+    background:rgba(255,255,255,.12);
+}
+
+.panels{
+    width:100%;
+    max-width:1180px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+    padding:0 34px 220px;
+}
+
+.panel{
+    background:var(--glass);
+    backdrop-filter:var(--blur);
+    border:1px solid var(--border);
+    border-radius:24px;
+    padding:26px;
+    animation:panelIn .7s var(--ease) both;
+    min-height:170px;
+}
+
+@keyframes panelIn{
+    from{opacity:0;transform:translateY(16px)}
+    to{opacity:1;transform:none}
+}
+
+.panel h2{
+    font-size:26px;
+    margin:0;
+}
+.panel p{
+    font-size:15px;
+    margin-top:8px;
+    opacity:.9;
+}
+.panel span{
+    display:block;
+    margin-top:14px;
+    font-size:13px;
+    opacity:.7;
+    text-align:center;
+}
+.panel span::after{
+    content:"";
+    display:block;
+    margin-top:14px;
+    height:1px;
+    background:linear-gradient(to right,transparent,var(--soft-line),transparent);
+}
+
+.large{
+    grid-column:span 2;
+    min-height:220px;
+}
+.tall{
+    grid-row:span 2;
+    min-height:360px;
+}
+
+.panel-5{
+    grid-column:1 / -1;
+    text-align:center;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    align-content:start;
+    min-height:240px;
+}
+
+.panel-5 h2{
+    grid-column:1 / -1;
+    white-space:nowrap;
+}
+.panel-5 p{
+    grid-column:1 / -1;
+    opacity:.85;
+}
+.panel-5 span{
+    grid-column:1 / -1;
+}
+
+.panel-5 div{
+    padding:14px;
+    border-radius:16px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.18);
+    text-align:center;
+    font-size:14px;
+    transition:.25s ease;
+}
+.panel-5 div:hover{
+    background:rgba(255,255,255,.16);
+    transform:translateY(-2px);
+}
+
+.panel-3{
+    line-height:1.7;
+}
+
+.footer{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+    font-size:13px;
+    opacity:.6;
+}
+
+@media(max-width:900px){
+    .panels{grid-template-columns:1fr}
+
+    .large,
+    .tall,
+    .panel-5{
+        grid-column:span 1;
+        grid-row:span 1;
+        min-height:auto;
+    }
+
+    .panel-5{
+        grid-template-columns:1fr;
+    }
+
+    .brand h1{font-size:36px}
+}
