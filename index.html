@@ -1,192 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Senkex</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Senkex</title>
 
-<meta name="description" content="Welcome to my portfolio! Check out tools, projects, and stats I’ve built to manage and improve communities, designs, and digital experiences.">
+  <meta name="description" content="Welcome to my portfolio! Check out tools, projects, and stats I’ve built to manage and improve communities, designs, and digital experiences.">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Senkex">
-<meta property="og:description" content="Welcome to my portfolio! Check out tools, projects, and stats I’ve built to manage and improve communities, designs, and digital experiences.">
-<meta property="og:image" content="https://i.imgur.com/qH3XO9e.png">
-<meta property="og:url" content="https://senkex.blog/">
-<meta property="og:site_name" content="Senkex">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Senkex">
+  <meta property="og:description" content="Welcome to my portfolio! Check out tools, projects, and stats I’ve built to manage and improve communities, designs, and digital experiences.">
+  <meta property="og:image" content="https://i.imgur.com/qH3XO9e.png">
+  <meta property="og:url" content="https://senkex.blog/">
+  <meta property="og:site_name" content="Senkex">
 
-<meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Senkex">
+  <meta name="twitter:description" content="Welcome to my portfolio! Check out tools, projects, and stats I’ve built to manage and improve communities, designs, and digital experiences.">
+  <meta name="twitter:image" content="https://i.imgur.com/qH3XO9e.png">
 
-<meta name="twitter:title" content="Senkex">
-<meta name="twitter:description" content="Welcome to my portfolio! Check out tools, projects, and stats I’ve built to manage and improve communities, designs, and digital experiences.">
-<meta name="twitter:image" content="https://i.imgur.com/qH3XO9e.png">
-
-<meta name="theme-color" content="#0088ff">
-
-<link rel="icon" href="images/logo.png">
-<link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#000000" />
 </head>
 
-<body>
+<body class="theme-dark">
+  <div id="loader">
+    <img src="images/logo.png" alt="Loading" />
+  </div>
 
-<div class="bg-wrapper">
+  <div class="bg-wrapper">
     <canvas id="mesh"></canvas>
     <div class="dark-overlay"></div>
-</div>
 
-<div class="top-bar">
-    <a class="icon-btn left-btn" href="https://github.com/senkex/Blog" target="_blank">
-        <img src="images/src.png" alt="GitHub">
-    </a>
-</div>
+    <div id="grid-bg" class="grid-bg" aria-hidden="true"></div>
 
-<main class="center">
+    <div class="grain" aria-hidden="true"></div>
+  </div>
 
-    <div class="brand">
-        <img src="images/logo.png" alt="">
-        <h1>Senkex</h1>
-
-        <div class="icons">
-            <a href="https://github.com/senkex" target="_blank">
-                <img src="images/icon1.png" alt="Icon 1">
-            </a>
-            <a href="https://x.com/ssenkex" target="_blank">
-                <img src="images/icon2.png" alt="Icon 2">
-            </a>
-            <a href="https://www.twitch.tv/ssenkex" target="_blank">
-                <img src="images/icon3.png" alt="Icon 3">
-            </a>
-        </div>
+  <header class="top-bar">
+    <div class="nav-left">
+      <img src="images/logo.png" class="nav-logo" alt="Logo" />
+      <div class="nav-brandwrap">
+        <span class="nav-brand">Senkex</span>
+        <span class="nav-sub">Buenos Aires - Argentina</span>
+      </div>
     </div>
 
-    <section class="panels">
+    <nav class="nav-links">
+      <a href="#home" data-i18n="nav_home"></a>
+      <a href="#about" data-i18n="nav_about"></a>
+      <a href="#services" data-i18n="nav_services"></a>
+      <a href="#work" data-i18n="nav_work"></a>
+      <a href="#reviews" data-i18n="nav_reviews"></a>
+    </nav>
 
-        <div class="panel panel-1">
-            <h2>Time Zone</h2>
-            <p>Buenos Aires, Argentina</p>
-            <span></span>
+    <div class="nav-right">
+      <button id="lang-btn" aria-label="Language">
+        <img src="images/lang.png" alt="Lang" />
+      </button>
+      <div class="lang-dropdown">
+        <button data-lang="en_us">English</button>
+        <button data-lang="es_ar">Español</button>
+      </div>
 
-            <div style="margin-top:14px;font-size:14px;opacity:.8">
-                Local time synced with region
-            </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-dot"></span>
+        <span class="theme-text" data-i18n="theme_label"></span>
+      </button>
 
-            <div id="globe"
-                 style="margin-top:18px;height:120px;border-radius:16px;
-                        background:
-                        radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),transparent 40%),
-                        radial-gradient(circle at 70% 70%,rgba(255,255,255,.18),transparent 45%),
-                        radial-gradient(circle at center,#0a1a2a,#000);
-                        animation:globeSpin 14s linear infinite;">
-            </div>
+      <a class="nav-cta" href="#work" data-i18n="nav_cta"></a>
+    </div>
+  </header>
+
+  <section id="home" class="hero section">
+    <div class="hero-content" id="heroParallax">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span data-i18n="hero_badge"></span>
+      </div>
+
+      <div class="hero-logo-wrap" data-parallax="logo">
+        <img src="images/logo.png" class="hero-logo" alt="Hero Logo" />
+        <span class="hero-glow"></span>
+      </div>
+
+      <h1 class="hero-title" data-parallax="title">
+        <span class="hero-title-strong">Senkex</span>
+        <span class="hero-title-sub" data-i18n="hero_title_sub"></span>
+      </h1>
+
+      <p class="hero-desc" data-parallax="desc" data-i18n="home_desc"></p>
+
+      <div class="hero-actions" data-parallax="buttons">
+        <a class="btn primary" href="#work" data-i18n="hero_btn_primary"></a>
+        <a class="btn ghost" href="#about" data-i18n="hero_btn_secondary"></a>
+      </div>
+
+      <div class="hero-typing" data-parallax="typing">
+        <span class="typing-prefix" data-i18n="typing_prefix"></span>
+        <span id="typingText" class="typing-text"></span>
+        <span class="typing-caret"></span>
+      </div>
+
+      <div class="scroll-indicator">
+        <span data-i18n="scroll_down"></span>
+        <div class="arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="panel about-panel">
+      <div class="about-text">
+        <h2 class="section-title" data-i18n="about_title"></h2>
+        <p class="section-sub" data-i18n="about_desc"></p>
+
+        <div class="chips">
+          <span class="chip" data-i18n="about_chip_1"></span>
+          <span class="chip" data-i18n="about_chip_2"></span>
+          <span class="chip" data-i18n="about_chip_3"></span>
         </div>
 
-        <div class="panel panel-2">
-            <h2>Statistics</h2>
-            <p>Global activity overview</p>
+        <ul class="about-list">
+          <li><span class="check"></span><span data-i18n="about_1"></span></li>
+          <li><span class="check"></span><span data-i18n="about_2"></span></li>
+          <li><span class="check"></span><span data-i18n="about_3"></span></li>
+          <li><span class="check"></span><span data-i18n="about_4"></span></li>
+          <li><span class="check"></span><span data-i18n="about_5"></span></li>
+          <li><span class="check"></span><span data-i18n="about_6"></span></li>
+        </ul>
 
-            <div style="margin-top:16px;display:flex;flex-direction:column;gap:14px">
-                <div>
-                    <strong data-count="35" style="font-size:24px">0</strong>
-                    <div style="font-size:13px;opacity:.7">Clients</div>
-                </div>
+        <div class="about-actions">
+          <a class="btn primary" href="#services" data-i18n="about_btn"></a>
+        </div>
+      </div>
 
-                <div>
-                    <strong data-count="9" style="font-size:24px">0</strong>
-                    <div style="font-size:13px;opacity:.7">Discord bots delivered</div>
-                </div>
-
-                <div>
-                    <strong data-count="23" style="font-size:24px">0</strong>
-                    <div style="font-size:13px;opacity:.7">Minecraft plugins sold</div>
-                </div>
-                <span></span>
-            </div>
+      <div class="about-media">
+        <div class="about-photo-wrap">
+          <img src="images/about.png" alt="About" />
+          <div class="about-photo-glow"></div>
         </div>
 
-        <div class="panel panel-3 tall">
-            <h2>About Me</h2>
-            <p>My name is Cristian, I am 21 years, and I currently creator and work at Nautic Studios</p>
-            <span></span>
+        <div class="about-stats">
+          <div class="stat">
+            <strong data-i18n="stat_1_value"></strong>
+            <span data-i18n="stat_1_label"></span>
+          </div>
+          <div class="stat">
+            <strong data-i18n="stat_2_value"></strong>
+            <span data-i18n="stat_2_label"></span>
+          </div>
+          <div class="stat">
+            <strong data-i18n="stat_3_value"></strong>
+            <span data-i18n="stat_3_label"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div style="margin-top:18px;font-size:14px;opacity:.75">
-                Discord: Senkex
-            </div>
-            <div style="margin-top:15px;font-size:14px;opacity:.75">
-                Email: senkex@nautic-studios.com
-            </div>
-            
-            <div style="margin-top:22px;font-size:15px;line-height:1.5;opacity:.9">
-                Project Manager — Gaming Events<br>
-                Server Configuration — Since 2015<br>
-                Plugin Development — Since 2020<br>
-                Developer — Minecraft & Discord<br>
-                Renders — Blender & Cinema4D<br>
-                Graphic Designer — 2D & 3D<br>
-                Logos · Thumbnails · Banners · Renders<br>
-            </div>
+  <section id="services" class="section">
+    <div class="section-head">
+      <h2 class="section-title center" data-i18n="services_title"></h2>
+      <p class="section-sub center" data-i18n="services_sub"></p>
+    </div>
 
-            <span></span>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><img src="images/service-config.png" alt="Server Configuration" /></div>
+        <strong data-i18n="service_1"></strong>
+        <p data-i18n="service_1_desc"></p>
+      </div>
 
-            <div style="margin-top:32px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px">
-                <img src="https://skillicons.dev/icons?i=java" height="42">
-                <img src="https://skillicons.dev/icons?i=js" height="42">
-                <img src="https://skillicons.dev/icons?i=nodejs" height="42">
-                <img src="https://skillicons.dev/icons?i=discordjs" height="42">
-                <img src="https://skillicons.dev/icons?i=mysql" height="42">
-                <img src="https://skillicons.dev/icons?i=mongo" height="42">
-                <img src="https://skillicons.dev/icons?i=ps" height="42">
-                <img src="https://skillicons.dev/icons?i=ai" height="42">
-                <img src="https://skillicons.dev/icons?i=blender" height="42">
-                <img src="https://skillicons.dev/icons?i=html" height="42">
-            </div>
+      <div class="service-card">
+        <div class="service-icon"><img src="images/service-dev.png" alt="Software Development" /></div>
+        <strong data-i18n="service_2"></strong>
+        <p data-i18n="service_2_desc"></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><img src="images/service-design.png" alt="Graphic Design" /></div>
+        <strong data-i18n="service_3"></strong>
+        <p data-i18n="service_3_desc"></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><img src="images/service-web.png" alt="Web Development" /></div>
+        <strong data-i18n="service_4"></strong>
+        <p data-i18n="service_4_desc"></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><img src="images/service-api.png" alt="Backend APIs" /></div>
+        <strong data-i18n="service_5"></strong>
+        <p data-i18n="service_5_desc"></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><img src="images/service-3d.png" alt="3D Renders" /></div>
+        <strong data-i18n="service_6"></strong>
+        <p data-i18n="service_6_desc"></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><img src="images/service-uiux.png" alt="UI UX" /></div>
+        <strong data-i18n="service_7"></strong>
+        <p data-i18n="service_7_desc"></p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><img src="images/service-pm.png" alt="Project Management" /></div>
+        <strong data-i18n="service_8"></strong>
+        <p data-i18n="service_8_desc"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="section-head">
+      <h2 class="section-title center" data-i18n="work_title"></h2>
+      <p class="section-sub center" data-i18n="work_sub"></p>
+    </div>
+
+    <div class="work-shell">
+      <div class="work-inner">
+        <div class="marquee pro" data-direction="left" data-speed="34">
+          <div class="marquee-track">
+            <div class="logo-pill"><img class="pill-img" src="images/replacespigot.png" alt="Spigot" /><span>SpigotMC</span></div>
+            <div class="logo-pill"><img class="pill-img" src="images/replacebuiltbybit.png" alt="BuiltByBit" /><span>BuiltByBit</span></div>
+
+            <div class="logo-pill"><img class="pill-img" src="images/replacemcmodels.png" alt="MCModels" /><span>MCModels</span></div>
+            <div class="logo-pill"><img class="pill-img" src="images/replacemodrinth.png" alt="Modrinth" /><span>Modrinth</span></div>
+            <div class="logo-pill"><img class="pill-img" src="images/replacepolymart.png" alt="Polymart" /><span>Polymart</span></div>
+            <div class="logo-pill"><img class="pill-img" src="images/replacehangar.png" alt="Hangar" /><span>Hangar</span></div>
+            <div class="logo-pill"><img class="pill-img" src="images/replacecurseforge.png" alt="CurseForge" /><span>CurseForge</span></div>
+
+
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=java" alt="java" /><span>Java</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=js" alt="js" /><span>JavaScript</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=nodejs" alt="nodejs" /><span>Node.js</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=discordjs" alt="discordjs" /><span>discord.js</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=maven" alt="maven" /><span>Maven</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=gradle" alt="gradle" /><span>Gradle</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=mysql" alt="mysql" /><span>MySQL</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=mongodb" alt="mongodb" /><span>MongoDB</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=discord" alt="discord" /><span>Discord</span></div>
+          </div>
         </div>
 
-        <div class="panel panel-4 large">
-            <h2>Year Overview</h2>
-            <p>Work and activity summary</p>
+        <div class="marquee pro" data-direction="right" data-speed="40">
+          <div class="marquee-track">
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=vscode" alt="vscode" /><span>VSCode</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=idea" alt="idea" /><span>IntelliJ</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=ps" alt="ps" /><span>Photoshop</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=ai" alt="ai" /><span>Illustrator</span></div>
+            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=ableton" alt="ableton" /><span>Ableton</span></div>
 
-            <div style="margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
-                <div>
-                    <strong data-count="366" style="font-size:30px">0</strong>
-                    <div style="font-size:13px;opacity:.7">Active days</div>
-                </div>
-
-                <div>
-                    <strong data-count="45000" style="font-size:30px">0</strong>
-                    <div style="font-size:13px;opacity:.7">Words written</div>
-                </div>
-
-                <div>
-                    <strong data-count="41" style="font-size:30px">0</strong>
-                    <div style="font-size:13px;opacity:.7">Projects delivered</div>
-                </div>
-                <span></span>
-            </div>
+            <div class="logo-pill"><img class="pill-img" src="images/replacegithub.png" alt="GitHub" /><span>GitHub</span></div>
+            <div class="logo-pill"><img class="pill-img" src="images/replaceminecraft.png" alt="Minecraft" /><span>Minecraft</span></div>
+            <div class="logo-pill"><img class="pill-img" src="images/replacevps.png" alt="VPS" /><span>VPS</span></div>
+            <div class="logo-pill"><img class="pill-img" src="images/replaceapi.png" alt="APIs" /><span>APIs</span></div>
+          </div>
         </div>
 
-        <div class="panel panel-5">
-            <h2>Skills & Platforms</h2>
-            <p>Technologies, ecosystems and projects</p>
+      </div>
+    </div>
+  </section>
 
-            <div>Minecraft Development</div>
-            <div>Discord Bot Systems</div>
-            <div>Tebex Store Setup</div>
-            <div>Website Development</div>
-            <div>Backend APIs</div>
-            <div>Database Design</div>
-            <div>UI / UX Design</div>
-            <div>3D Graphics</div>
+  <section id="reviews" class="section">
+    <div class="section-head">
+      <h2 class="section-title center" data-i18n="reviews_title"></h2>
+      <p class="section-sub center" data-i18n="reviews_sub"></p>
+    </div>
 
-            <span></span>
+    <div class="review-stage" id="reviewStage">
+      <article class="spot-card" data-review>
+        <div class="spot-header">
+          <img class="spot-header-img" src="images/review-header1.png" alt="Header" />
         </div>
+        <div class="spot-avatar-wrap">
+          <img class="spot-avatar" src="images/review-user1.png" alt="Owner" />
+        </div>
+        <div class="spot-body">
+          <p class="spot-desc" data-i18n="review_1_desc"></p>
+          <div class="spot-name">
+            <strong data-i18n="review_1_name"></strong>
+            <span data-i18n="review_1_role"></span>
+          </div>
+          <div class="spot-stars">★★★★★</div>
+        </div>
+      </article>
 
-    </section>
+      <article class="spot-card" data-review>
+        <div class="spot-header">
+          <img class="spot-header-img" src="images/review-header2.png" alt="Header" />
+        </div>
+        <div class="spot-avatar-wrap">
+          <img class="spot-avatar" src="images/review-user2.png" alt="Owner" />
+        </div>
+        <div class="spot-body">
+          <p class="spot-desc" data-i18n="review_2_desc"></p>
+          <div class="spot-name">
+            <strong data-i18n="review_2_name"></strong>
+            <span data-i18n="review_2_role"></span>
+          </div>
+          <div class="spot-stars">★★★★★</div>
+        </div>
+      </article>
 
-</main>
+      <article class="spot-card" data-review>
+        <div class="spot-header">
+          <img class="spot-header-img" src="images/review-header3.png" alt="Header" />
+        </div>
+        <div class="spot-avatar-wrap">
+          <img class="spot-avatar" src="images/review-user3.png" alt="Owner" />
+        </div>
+        <div class="spot-body">
+          <p class="spot-desc" data-i18n="review_3_desc"></p>
+          <div class="spot-name">
+            <strong data-i18n="review_3_name"></strong>
+            <span data-i18n="review_3_role"></span>
+          </div>
+          <div class="spot-stars">★★★★★</div>
+        </div>
+      </article>
 
-<footer class="footer">
-    <span>v0.1-BETA</span>
+      <article class="spot-card" data-review>
+        <div class="spot-header">
+          <img class="spot-header-img" src="images/review-header4.png" alt="Header" />
+        </div>
+        <div class="spot-avatar-wrap">
+          <img class="spot-avatar" src="images/review-user4.png" alt="Owner" />
+        </div>
+        <div class="spot-body">
+          <p class="spot-desc" data-i18n="review_4_desc"></p>
+          <div class="spot-name">
+            <strong data-i18n="review_4_name"></strong>
+            <span data-i18n="review_4_role"></span>
+          </div>
+          <div class="spot-stars">★★★★★</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="review-controls">
+      <button class="rc-btn" id="prevReview" aria-label="Previous">‹</button>
+      <div class="rc-dots" id="reviewDots"></div>
+      <button class="rc-btn" id="nextReview" aria-label="Next">›</button>
+    </div>
+  </section>
+
+<footer class="footer-full">
+  <div class="footer-inner">
+    <div class="footer-bottom footer-bottom-3">
+      <span>© <span id="year"></span> Senkex · <span data-i18n="footer_rights"></span></span>
+
+      <div class="footer-social" aria-label="Social links">
+
+        <a href="https://youtube.com/@senkex" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31.6 31.6 0 0 0 2 12a31.6 31.6 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 22 12a31.6 31.6 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+          </svg>
+        </a>
+
+        <a href="https://twitch.tv/ssenkex" target="_blank" rel="noopener" aria-label="Twitch" title="Twitch">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M4 3h17v12l-5 5h-4l-2 2H7v-2H4V3zm3 2v12h3v2.2L12.2 17H16l3-3V5H7zm6 3h2v6h-2V8zm-4 0h2v6H9V8z"/>
+          </svg>
+        </a>
+
+        <a href="https://x.com/ssenkex" target="_blank" rel="noopener" aria-label="Twitter/X" title="Twitter/X">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-6.6L5.1 22H2l8.2-9.4L1 2h7l4.8 6.1L18.9 2zm-1.2 18h1.7L7.1 3.9H5.3L17.7 20z"/>
+          </svg>
+        </a>
+
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm9 2h-9A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4zm-4.5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.8 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+          </svg>
+        </a>
+
+        <a href="https://tiktok.com/@ssenkex" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M14 2h2c.2 2 1.3 3.8 3 4.7V9c-1.6-.1-3-.6-4-1.5V16a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v2.3c-.3-.1-.7-.2-1-.2a3.6 3.6 0 1 0 3.6 3.6V2z"/>
+          </svg>
+        </a>
+
+        <a href="https://github.com/senkex" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 0 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.2-.2-4.5-1.1-4.5-5A3.9 3.9 0 0 1 7 7.1a3.6 3.6 0 0 1 .1-2.6s.8-.2 2.7 1a9.3 9.3 0 0 1 4.9 0c1.9-1.2 2.7-1 2.7-1a3.6 3.6 0 0 1 .1 2.6 3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.8-4.5 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.behance.net/nauticstudios" target="_blank" rel="noopener" aria-label="Behance" title="Behance">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M9.6 11.3c.8-.4 1.3-1.2 1.3-2.2 0-2-1.4-3.1-3.9-3.1H2v12h5.5c2.7 0 4.4-1.2 4.4-3.6 0-1.5-.8-2.6-2.3-3.1zM4.4 7.9h2.4c1 0 1.7.4 1.7 1.3 0 1-.6 1.4-1.7 1.4H4.4V7.9zm2.7 8.2H4.4v-3.4h2.8c1.2 0 2 .5 2 1.7 0 1.3-.8 1.7-2.1 1.7zM20.1 10.1c-3.2 0-4.9 2.3-4.9 5 0 2.7 1.7 4.9 5.1 4.9 2.3 0 3.8-1.1 4.4-3.1h-2.2c-.2.8-1 1.2-2 1.2-1.4 0-2.2-.7-2.2-2.3h6.6c.1-3.1-1.3-5.7-4.8-5.7zm-1.9 4c.1-1.1.8-2.1 2.1-2.1 1.3 0 1.9.7 2.1 2.1h-4.2zM18 6.9h4V8.5h-4V6.9z"/>
+          </svg>
+        </a>
+
+        <a href="https://discord.gg/cdT5g5xsVq" target="_blank" rel="noopener" aria-label="Discord" title="Discord">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="currentColor" d="M20.3 5.3A16.9 16.9 0 0 0 16 4l-.2.4a15.6 15.6 0 0 1 3.6 1.4 13.7 13.7 0 0 0-9 0A15.6 15.6 0 0 1 14 4.4L13.8 4A16.9 16.9 0 0 0 9.5 5.3C6.8 9.1 6 12.8 6.2 16.4a16.6 16.6 0 0 0 5 2.6l.6-.9a10.4 10.4 0 0 1-1.6-.8l.4-.3c3 1.4 6.3 1.4 9.3 0l.4.3c-.5.3-1 .6-1.6.8l.6.9a16.6 16.6 0 0 0 5-2.6c.3-4.2-.6-7.8-3.2-11.1zM10.3 14.8c-.8 0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6zm5.4 0c-.8 0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6z"/>
+          </svg>
+        </a>
+
+      </div>
+
+      <span class="powered">Powered by <strong>Nautic Studios</strong></span>
+    </div>
+  </div>
 </footer>
 
+
 <script src="script.js"></script>
+  <script src="lang.js"></script>
 </body>
 </html>
