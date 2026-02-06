@@ -1,0 +1,86 @@
+{
+  "nav_home": "Home",
+  "nav_about": "About",
+  "nav_services": "Services",
+  "nav_work": "Work",
+  "nav_reviews": "Reviews",
+  "nav_cta": "See work",
+
+  "theme_label": "Theme",
+
+  "hero_badge": "Currently available",
+  "hero_title_sub": "<span class=\"accent\">Full-stack</span> systems & design",
+  "hero_btn_primary": "Explore work",
+  "hero_btn_secondary": "About me",
+
+  "typing_prefix": "I build:",
+  "typing_words": ["Web Development", "UI/UX", "Minecraft Systems", "Discord Bots", "Backend APIs", "3D Renders"],
+
+  "home_desc": "My name is Cristian, I am 21 years old and I have extensive experience in community management, server development and digital products. I specialize in Minecraft and Discord systems, building reliable solutions focused on performance, scalability and modern design.",
+  "scroll_down": "Click to scroll",
+
+  "about_title": "About Me",
+  "about_desc": "I’ve been working in gaming and development for years, combining technical skill with modern aesthetics. My focus is stable, scalable systems that feel premium and help projects grow.",
+  "about_chip_1": "Performance-first",
+  "about_chip_2": "Modern UI",
+  "about_chip_3": "Scalable systems",
+  "about_btn": "View services",
+
+  "about_1": "Project Manager — Gaming Events",
+  "about_2": "Server Configuration — Since 2015",
+  "about_3": "Plugin Development — Since 2020",
+  "about_4": "Developer — Minecraft & Discord",
+  "about_5": "3D Renders — Blender & Cinema4D",
+  "about_6": "Graphic Designer — 2D & 3D",
+
+  "stat_1_value": "8+",
+  "stat_1_label": "Years experience",
+  "stat_2_value": "400+",
+  "stat_2_label": "Projects delivered",
+  "stat_3_value": "5★",
+  "stat_3_label": "Client rating",
+
+  "services_title": "Services",
+  "services_sub": "Everything I do, optimized for quality, speed and a premium feel.",
+
+  "service_1": "Server Configuration",
+  "service_1_desc": "Optimized setups, security, performance and scalable architecture.",
+  "service_2": "Software Development",
+  "service_2_desc": "Custom systems, automation, integrations and clean codebases.",
+  "service_3": "Graphic Design",
+  "service_3_desc": "Branding, banners, assets and premium visuals.",
+  "service_4": "Web Development",
+  "service_4_desc": "Modern landing pages, portfolios and web apps with smooth motion.",
+  "service_5": "Backend APIs",
+  "service_5_desc": "REST APIs, databases, auth and reliable services.",
+  "service_6": "3D Renders",
+  "service_6_desc": "High-quality 3D scenes, product renders and visuals.",
+  "service_7": "UI / UX Design",
+  "service_7_desc": "Mobile-like UI, clean flows, modern components and polish.",
+  "service_8": "Project Management",
+  "service_8_desc": "Planning, delivery and communication end-to-end.",
+
+  "work_title": "Work & Technologies",
+  "work_sub": "Logos, platforms and tools I've worked with — infinite loop, no cuts.",
+
+  "reviews_title": "Client Reviews",
+  "reviews_sub": "Spotlight carousel: focus in the center, blur on the sides.",
+
+  "review_1_desc": "Great work, fast delivery and clear communication throughout the whole process. Highly recommended.",
+  "review_1_name": "Summoncraft Network",
+  "review_1_role": "Saantana · CEO",
+
+  "review_2_desc": "Professional service, great attention to detail and results exactly as requested.",
+  "review_2_name": "MineBosh Network",
+  "review_2_role": "Addned · CEO",
+
+  "review_3_desc": "Well-done work, everything clean and working perfectly. Would hire again.",
+  "review_3_name": "MineBolt Network",
+  "review_3_role": "Sxcrificio · CEO",
+
+  "review_4_desc": "Fast communication, great quality and polished details. Would work again.",
+  "review_4_name": "SpaceMC Network",
+  "review_4_role": "DaniRamos · Owner",
+
+  "footer_rights": "All rights reserved"
+}

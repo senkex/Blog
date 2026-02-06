@@ -1,0 +1,86 @@
+{
+  "nav_home": "Inicio",
+  "nav_about": "Sobre mí",
+  "nav_services": "Servicios",
+  "nav_work": "Work",
+  "nav_reviews": "Reseñas",
+  "nav_cta": "Ver work",
+
+  "theme_label": "Tema",
+
+  "hero_badge": "Actualmente disponible",
+  "hero_title_sub": "<span class=\"accent\">Full-stack</span> systems & design",
+  "hero_btn_primary": "Explorar work",
+  "hero_btn_secondary": "Sobre mí",
+
+  "typing_prefix": "Construyo:",
+  "typing_words": ["Desarrollo Web", "UI/UX", "Sistemas Minecraft", "Bots de Discord", "APIs Backend", "Renders 3D"],
+
+  "home_desc": "Mi nombre es Cristian, tengo 21 años y cuento con amplia experiencia en gestión de comunidades, desarrollo de servidores y productos digitales. Me especializo en sistemas de Minecraft y Discord, creando soluciones confiables enfocadas en rendimiento, escalabilidad y diseño moderno.",
+  "scroll_down": "Click para bajar",
+
+  "about_title": "Sobre mí",
+  "about_desc": "Trabajo en la industria del gaming y el desarrollo desde hace años, combinando habilidad técnica con una estética moderna. Mi enfoque está en crear sistemas estables, escalables y con una sensación premium que ayuden a los proyectos a crecer.",
+  "about_chip_1": "Rendimiento primero",
+  "about_chip_2": "UI moderna",
+  "about_chip_3": "Sistemas escalables",
+  "about_btn": "Ver servicios",
+
+  "about_1": "Project Manager — Eventos Gaming",
+  "about_2": "Configuración de Servidores — Desde 2015",
+  "about_3": "Desarrollo de Plugins — Desde 2020",
+  "about_4": "Desarrollador — Minecraft y Discord",
+  "about_5": "Renders 3D — Blender y Cinema4D",
+  "about_6": "Diseñador Gráfico — 2D y 3D",
+
+  "stat_1_value": "8+",
+  "stat_1_label": "Años de experiencia",
+  "stat_2_value": "400+",
+  "stat_2_label": "Proyectos entregados",
+  "stat_3_value": "5★",
+  "stat_3_label": "Calificación de clientes",
+
+  "services_title": "Servicios",
+  "services_sub": "Todo lo que hago, optimizado para calidad, velocidad y una experiencia premium.",
+
+  "service_1": "Configuración de Servidores",
+  "service_1_desc": "Setups optimizados, seguridad, rendimiento y arquitectura escalable.",
+  "service_2": "Desarrollo de Software",
+  "service_2_desc": "Sistemas a medida, automatización, integraciones y bases de código limpias.",
+  "service_3": "Diseño Gráfico",
+  "service_3_desc": "Branding, banners, assets y visuales premium.",
+  "service_4": "Desarrollo Web",
+  "service_4_desc": "Landing pages modernas, portfolios y aplicaciones web con animaciones suaves.",
+  "service_5": "APIs Backend",
+  "service_5_desc": "APIs REST, bases de datos, autenticación y servicios confiables.",
+  "service_6": "Renders 3D",
+  "service_6_desc": "Escenas 3D de alta calidad, renders de productos y visuales.",
+  "service_7": "Diseño UI / UX",
+  "service_7_desc": "Interfaces tipo mobile, flujos limpios, componentes modernos y atención al detalle.",
+  "service_8": "Gestión de Proyectos",
+  "service_8_desc": "Planificación, entrega y comunicación de principio a fin.",
+
+  "work_title": "Work & Tecnologías",
+  "work_sub": "Logos, plataformas y herramientas con las que trabajé — loop infinito, sin cortes.",
+
+  "reviews_title": "Reseñas de Clientes",
+  "reviews_sub": "Carrusel spotlight: foco en el centro, blur en los costados.",
+
+  "review_1_desc": "Excelente trabajo, entrega rápida y comunicación clara durante todo el proceso. Muy recomendado.",
+  "review_1_name": "Summoncraft Network",
+  "review_1_role": "Saantana · CEO",
+
+  "review_2_desc": "Servicio profesional, gran atención al detalle y resultados exactamente como se solicitaron.",
+  "review_2_name": "MineBosh Network",
+  "review_2_role": "Addned · CEO",
+
+  "review_3_desc": "Trabajo bien hecho, todo limpio y funcionando perfectamente. Volvería a contratar.",
+  "review_3_name": "MineBolt Network",
+  "review_3_role": "Sxcrificio · CEO",
+
+  "review_4_desc": "Comunicación rápida, gran calidad y detalles pulidos. Volvería a trabajar.",
+  "review_4_name": "SpaceMC Network",
+  "review_4_role": "DaniRamos · Owner",
+
+  "footer_rights": "Todos los derechos reservados"
+}
