@@ -20,8 +20,11 @@
   <meta name="twitter:image" content="https://i.imgur.com/qH3XO9e.png">
 
   <link rel="icon" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
   <link rel="stylesheet" href="style.css" />
   <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 </head>
 
 <body class="theme-dark">
@@ -32,9 +35,7 @@
   <div class="bg-wrapper">
     <canvas id="mesh"></canvas>
     <div class="dark-overlay"></div>
-
     <div id="grid-bg" class="grid-bg" aria-hidden="true"></div>
-
     <div class="grain" aria-hidden="true"></div>
   </div>
 
@@ -43,7 +44,7 @@
       <img src="images/logo.png" class="nav-logo" alt="Logo" />
       <div class="nav-brandwrap">
         <span class="nav-brand">Senkex</span>
-        <span class="nav-sub">Buenos Aires - Argentina</span>
+        <span class="nav-sub">Buenos Aires · AR</span>
       </div>
     </div>
 
@@ -82,7 +83,6 @@
 
       <div class="hero-logo-wrap" data-parallax="logo">
         <img src="images/logo.png" class="hero-logo" alt="Hero Logo" />
-        <span class="hero-glow"></span>
       </div>
 
       <h1 class="hero-title" data-parallax="title">
@@ -104,18 +104,29 @@
       </div>
 
       <div class="scroll-indicator">
-        <span data-i18n="scroll_down"></span>
         <div class="arrow"></div>
+        <span data-i18n="scroll_down"></span>
       </div>
     </div>
   </section>
 
   <section id="about" class="section">
-    <div class="panel about-panel">
-      <div class="about-text">
-        <h2 class="section-title" data-i18n="about_title"></h2>
-        <p class="section-sub" data-i18n="about_desc"></p>
+    <div class="section-head left">
+      <span class="eyebrow">01 — Profile</span>
+      <h2 class="section-title" data-i18n="about_title"></h2>
+      <p class="section-sub" data-i18n="about_desc"></p>
+    </div>
 
+    <div class="about-grid">
+      <div class="about-photo-card">
+        <img src="images/about.png" alt="About" />
+        <div class="about-photo-tag">
+          <span class="dot"></span>
+          <span>Senkex</span>
+        </div>
+      </div>
+
+      <div class="about-feature-card">
         <div class="chips">
           <span class="chip" data-i18n="about_chip_1"></span>
           <span class="chip" data-i18n="about_chip_2"></span>
@@ -135,42 +146,40 @@
           <a class="btn primary" href="#services" data-i18n="about_btn"></a>
         </div>
       </div>
+    </div>
 
-      <div class="about-media">
-        <div class="about-photo-wrap">
-          <img src="images/about.png" alt="About" />
-          <div class="about-photo-glow"></div>
-        </div>
-
-        <div class="about-stats">
-          <div class="stat">
-            <strong data-i18n="stat_1_value"></strong>
-            <span data-i18n="stat_1_label"></span>
-          </div>
-          <div class="stat">
-            <strong data-i18n="stat_2_value"></strong>
-            <span data-i18n="stat_2_label"></span>
-          </div>
-          <div class="stat">
-            <strong data-i18n="stat_3_value"></strong>
-            <span data-i18n="stat_3_label"></span>
-          </div>
-        </div>
+    <div class="about-stats-bar">
+      <div class="stat">
+        <strong data-i18n="stat_1_value"></strong>
+        <span data-i18n="stat_1_label"></span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <strong data-i18n="stat_2_value"></strong>
+        <span data-i18n="stat_2_label"></span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <strong data-i18n="stat_3_value"></strong>
+        <span data-i18n="stat_3_label"></span>
       </div>
     </div>
   </section>
 
   <section id="services" class="section">
     <div class="section-head">
+      <span class="eyebrow">02 — Services</span>
       <h2 class="section-title center" data-i18n="services_title"></h2>
-      <p class="section-sub center" data-i18n="services_sub"></p>
     </div>
 
-    <div class="services-grid">
-      <div class="service-card">
+    <div class="services-grid bento">
+      <div class="service-card feature">
         <div class="service-icon"><img src="images/service-config.png" alt="Server Configuration" /></div>
-        <strong data-i18n="service_1"></strong>
-        <p data-i18n="service_1_desc"></p>
+        <div class="service-meta">
+          <strong data-i18n="service_1"></strong>
+          <p data-i18n="service_1_desc"></p>
+        </div>
+        <span class="service-tag">Featured</span>
       </div>
 
       <div class="service-card">
@@ -197,10 +206,12 @@
         <p data-i18n="service_5_desc"></p>
       </div>
 
-      <div class="service-card">
+      <div class="service-card wide">
         <div class="service-icon"><img src="images/service-3d.png" alt="3D Renders" /></div>
-        <strong data-i18n="service_6"></strong>
-        <p data-i18n="service_6_desc"></p>
+        <div class="service-meta">
+          <strong data-i18n="service_6"></strong>
+          <p data-i18n="service_6_desc"></p>
+        </div>
       </div>
 
       <div class="service-card">
@@ -219,135 +230,102 @@
 
   <section id="work" class="section">
     <div class="section-head">
+      <span class="eyebrow">03 — Stack</span>
       <h2 class="section-title center" data-i18n="work_title"></h2>
-      <p class="section-sub center" data-i18n="work_sub"></p>
     </div>
 
     <div class="work-shell">
-      <div class="work-inner">
-        <div class="marquee pro" data-direction="left" data-speed="34">
-          <div class="marquee-track">
-            <div class="logo-pill"><img class="pill-img" src="images/replacespigot.png" alt="Spigot" /><span>SpigotMC</span></div>
-            <div class="logo-pill"><img class="pill-img" src="images/replacebuiltbybit.png" alt="BuiltByBit" /><span>BuiltByBit</span></div>
-
-            <div class="logo-pill"><img class="pill-img" src="images/replacemcmodels.png" alt="MCModels" /><span>MCModels</span></div>
-            <div class="logo-pill"><img class="pill-img" src="images/replacemodrinth.png" alt="Modrinth" /><span>Modrinth</span></div>
-            <div class="logo-pill"><img class="pill-img" src="images/replacepolymart.png" alt="Polymart" /><span>Polymart</span></div>
-            <div class="logo-pill"><img class="pill-img" src="images/replacehangar.png" alt="Hangar" /><span>Hangar</span></div>
-            <div class="logo-pill"><img class="pill-img" src="images/replacecurseforge.png" alt="CurseForge" /><span>CurseForge</span></div>
-
-
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=java" alt="java" /><span>Java</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=js" alt="js" /><span>JavaScript</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=nodejs" alt="nodejs" /><span>Node.js</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=discordjs" alt="discordjs" /><span>discord.js</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=maven" alt="maven" /><span>Maven</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=gradle" alt="gradle" /><span>Gradle</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=mysql" alt="mysql" /><span>MySQL</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=mongodb" alt="mongodb" /><span>MongoDB</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=discord" alt="discord" /><span>Discord</span></div>
-          </div>
+      <div class="marquee pro" data-direction="left" data-speed="34">
+        <div class="marquee-track">
+          <div class="logo-pill"><img class="pill-img" src="images/replacespigot.png" alt="Spigot" /><span>SpigotMC</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replacebuiltbybit.png" alt="BuiltByBit" /><span>BuiltByBit</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replacemcmodels.png" alt="MCModels" /><span>MCModels</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replacemodrinth.png" alt="Modrinth" /><span>Modrinth</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replacepolymart.png" alt="Polymart" /><span>Polymart</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replacehangar.png" alt="Hangar" /><span>Hangar</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replacecurseforge.png" alt="CurseForge" /><span>CurseForge</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=java" alt="java" /><span>Java</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=js" alt="js" /><span>JavaScript</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=nodejs" alt="nodejs" /><span>Node.js</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=discordjs" alt="discordjs" /><span>discord.js</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=maven" alt="maven" /><span>Maven</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=gradle" alt="gradle" /><span>Gradle</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=mysql" alt="mysql" /><span>MySQL</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=mongodb" alt="mongodb" /><span>MongoDB</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=discord" alt="discord" /><span>Discord</span></div>
         </div>
+      </div>
 
-        <div class="marquee pro" data-direction="right" data-speed="40">
-          <div class="marquee-track">
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=vscode" alt="vscode" /><span>VSCode</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=idea" alt="idea" /><span>IntelliJ</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=ps" alt="ps" /><span>Photoshop</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=ai" alt="ai" /><span>Illustrator</span></div>
-            <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=ableton" alt="ableton" /><span>Ableton</span></div>
-
-            <div class="logo-pill"><img class="pill-img" src="images/replacegithub.png" alt="GitHub" /><span>GitHub</span></div>
-            <div class="logo-pill"><img class="pill-img" src="images/replaceminecraft.png" alt="Minecraft" /><span>Minecraft</span></div>
-            <div class="logo-pill"><img class="pill-img" src="images/replacevps.png" alt="VPS" /><span>VPS</span></div>
-            <div class="logo-pill"><img class="pill-img" src="images/replaceapi.png" alt="APIs" /><span>APIs</span></div>
-          </div>
+      <div class="marquee pro" data-direction="right" data-speed="40">
+        <div class="marquee-track">
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=vscode" alt="vscode" /><span>VSCode</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=idea" alt="idea" /><span>IntelliJ</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=ps" alt="ps" /><span>Photoshop</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=ai" alt="ai" /><span>Illustrator</span></div>
+          <div class="logo-pill"><img class="pill-img" src="https://skillicons.dev/icons?i=ableton" alt="ableton" /><span>Ableton</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replacegithub.png" alt="GitHub" /><span>GitHub</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replaceminecraft.png" alt="Minecraft" /><span>Minecraft</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replacevps.png" alt="VPS" /><span>VPS</span></div>
+          <div class="logo-pill"><img class="pill-img" src="images/replaceapi.png" alt="APIs" /><span>APIs</span></div>
         </div>
-
       </div>
     </div>
   </section>
 
   <section id="reviews" class="section">
     <div class="section-head">
+      <span class="eyebrow">04 — Testimonials</span>
       <h2 class="section-title center" data-i18n="reviews_title"></h2>
-      <p class="section-sub center" data-i18n="reviews_sub"></p>
     </div>
 
-    <div class="review-stage" id="reviewStage">
-      <article class="spot-card" data-review>
-        <div class="spot-header">
-          <img class="spot-header-img" src="images/review-header1.png" alt="Header" />
-        </div>
-        <div class="spot-avatar-wrap">
-          <img class="spot-avatar" src="images/review-user1.png" alt="Owner" />
-        </div>
-        <div class="spot-body">
-          <p class="spot-desc" data-i18n="review_1_desc"></p>
-          <div class="spot-name">
+    <div class="reviews-grid">
+      <article class="review-card">
+        <div class="review-head">
+          <img class="review-avatar" src="images/review-user1.png" alt="User" />
+          <div class="review-id">
             <strong data-i18n="review_1_name"></strong>
             <span data-i18n="review_1_role"></span>
           </div>
-          <div class="spot-stars">★★★★★</div>
+          <span class="review-stars">★★★★★</span>
         </div>
+        <p class="review-quote" data-i18n="review_1_desc"></p>
       </article>
 
-      <article class="spot-card" data-review>
-        <div class="spot-header">
-          <img class="spot-header-img" src="images/review-header2.png" alt="Header" />
-        </div>
-        <div class="spot-avatar-wrap">
-          <img class="spot-avatar" src="images/review-user2.png" alt="Owner" />
-        </div>
-        <div class="spot-body">
-          <p class="spot-desc" data-i18n="review_2_desc"></p>
-          <div class="spot-name">
+      <article class="review-card">
+        <div class="review-head">
+          <img class="review-avatar" src="images/review-user2.png" alt="User" />
+          <div class="review-id">
             <strong data-i18n="review_2_name"></strong>
             <span data-i18n="review_2_role"></span>
           </div>
-          <div class="spot-stars">★★★★★</div>
+          <span class="review-stars">★★★★★</span>
         </div>
+        <p class="review-quote" data-i18n="review_2_desc"></p>
       </article>
 
-      <article class="spot-card" data-review>
-        <div class="spot-header">
-          <img class="spot-header-img" src="images/review-header3.png" alt="Header" />
-        </div>
-        <div class="spot-avatar-wrap">
-          <img class="spot-avatar" src="images/review-user3.png" alt="Owner" />
-        </div>
-        <div class="spot-body">
-          <p class="spot-desc" data-i18n="review_3_desc"></p>
-          <div class="spot-name">
+      <article class="review-card">
+        <div class="review-head">
+          <img class="review-avatar" src="images/review-user3.png" alt="User" />
+          <div class="review-id">
             <strong data-i18n="review_3_name"></strong>
             <span data-i18n="review_3_role"></span>
           </div>
-          <div class="spot-stars">★★★★★</div>
+          <span class="review-stars">★★★★★</span>
         </div>
+        <p class="review-quote" data-i18n="review_3_desc"></p>
       </article>
 
-      <article class="spot-card" data-review>
-        <div class="spot-header">
-          <img class="spot-header-img" src="images/review-header4.png" alt="Header" />
-        </div>
-        <div class="spot-avatar-wrap">
-          <img class="spot-avatar" src="images/review-user4.png" alt="Owner" />
-        </div>
-        <div class="spot-body">
-          <p class="spot-desc" data-i18n="review_4_desc"></p>
-          <div class="spot-name">
+      <article class="review-card">
+        <div class="review-head">
+          <img class="review-avatar" src="images/review-user4.png" alt="User" />
+          <div class="review-id">
             <strong data-i18n="review_4_name"></strong>
             <span data-i18n="review_4_role"></span>
           </div>
-          <div class="spot-stars">★★★★★</div>
+          <span class="review-stars">★★★★★</span>
         </div>
+        <p class="review-quote" data-i18n="review_4_desc"></p>
       </article>
-    </div>
-
-    <div class="review-controls">
-      <button class="rc-btn" id="prevReview" aria-label="Previous">‹</button>
-      <div class="rc-dots" id="reviewDots"></div>
-      <button class="rc-btn" id="nextReview" aria-label="Next">›</button>
     </div>
   </section>
 
