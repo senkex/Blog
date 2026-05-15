@@ -41,7 +41,7 @@
   "stat_3_label": "Client rating",
 
   "services_title": "Services",
-  "services_sub": "Everything I do, optimized for quality, speed and a premium feel.",
+  "services_sub": "",
 
   "service_1": "Server Configuration",
   "service_1_desc": "Optimized setups, security, performance and scalable architecture.",
@@ -61,10 +61,10 @@
   "service_8_desc": "Planning, delivery and communication end-to-end.",
 
   "work_title": "Work & Technologies",
-  "work_sub": "Logos, platforms and tools I've worked with — infinite loop, no cuts.",
+  "work_sub": "",
 
   "reviews_title": "Client Reviews",
-  "reviews_sub": "Spotlight carousel: focus in the center, blur on the sides.",
+  "reviews_sub": "",
 
   "review_1_desc": "Great work, fast delivery and clear communication throughout the whole process. Highly recommended.",
   "review_1_name": "Summoncraft Network",
