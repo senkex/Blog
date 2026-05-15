@@ -3,7 +3,6 @@
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 
 :root{
-  /* Apple-blue palette (no purples, no pinks) */
   --accent:#0071e3;
   --accent-hover:#0a84ff;
   --accent-soft:rgba(0,113,227,.14);
@@ -25,7 +24,6 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   --textSoft:rgba(235,235,245,.60);
   --textDim:rgba(235,235,245,.38);
 
-  /* Flat, neutral shadows — no colored glows */
   --shadow:0 30px 80px rgba(0,0,0,.55), 0 1px 0 rgba(255,255,255,.05) inset;
   --shadowSoft:0 12px 36px rgba(0,0,0,.32), 0 1px 0 rgba(255,255,255,.04) inset;
   --shadowFlat:0 8px 22px rgba(0,0,0,.28);
