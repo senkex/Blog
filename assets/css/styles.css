@@ -274,7 +274,7 @@ em.accent { font-style: normal; }
 }
 
 .hero__title {
-  font-size: clamp(3.5rem, 11vw, 11rem);
+  font-size: clamp(3rem, 8vw, 7.5rem);
   font-weight: 800;
   line-height: 0.9;
   letter-spacing: -0.03em;
@@ -619,7 +619,7 @@ em.accent { font-style: normal; }
   margin-bottom: 18px;
 }
 .page__title {
-  font-size: clamp(3.4rem, 9.5vw, 9rem);
+  font-size: clamp(3rem, 7.5vw, 6.5rem);
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.03em;
