@@ -926,15 +926,6 @@ em.accent { font-style: normal; }
   .hero__lead, .hero__text { animation: none; opacity: 1; transform: none; }
 }
 
-html.page--closed body {
-  opacity: 0;
-  transform: translateY(-30px);
-  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
-}
-body {
-  transition: opacity 0.6s var(--ease);
-}
-
 .pf-head {
   text-align: center;
   margin-bottom: 120px;
