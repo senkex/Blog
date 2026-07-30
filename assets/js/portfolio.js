@@ -48,37 +48,12 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && lightbox && lightbox.classList.contains('is-open')) closeLightbox();
 });
 
-async function listDir(path, re) {
-  try {
-    const res = await fetch(path);
-    if (!res.ok) return [];
-    const html = await res.text();
-    const doc = new DOMParser().parseFromString(html, 'text/html');
-    return [...doc.querySelectorAll('a')]
-      .map((a) => a.getAttribute('href'))
-      .filter((h) => h && re.test(h))
-      .map((h) => decodeURIComponent(h.split('/').pop()));
-  } catch {
-    return [];
-  }
-}
-
 async function listEntries(path) {
   try {
-    const res = await fetch(path);
+    const res = await fetch(path + 'index.json');
     if (!res.ok) return { dirs: [], files: [] };
-    const html = await res.text();
-    const doc = new DOMParser().parseFromString(html, 'text/html');
-    const dirs = [];
-    const files = [];
-    [...doc.querySelectorAll('a')].forEach((a) => {
-      let h = a.getAttribute('href');
-      if (!h || h.startsWith('..') || h.startsWith('/') || h.startsWith('?') || h.startsWith('#')) return;
-      h = h.replace(/^\.?\//, '');
-      if (h.endsWith('/')) dirs.push(h.replace(/\/$/, ''));
-      else files.push(h.split('/').pop());
-    });
-    return { dirs, files };
+    const data = await res.json();
+    return { dirs: data.dirs || [], files: data.files || [] };
   } catch {
     return { dirs: [], files: [] };
   }
