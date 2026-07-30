@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../../" />
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <title>Contact | Senkex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="header" id="header">
+    <a href="index.html" class="logo" aria-label="Home">
+      <img src="assets/img/logo.png" class="logo__mark" alt="Senkex" />
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Page Navigation">
+      <a href="index.html" class="nav__link">
+        <span class="nav__bar"></span><span class="nav__text" data-i18n="nav_home">Home</span>
+      </a>
+      <a href="pages/about/about.html" class="nav__link">
+        <span class="nav__bar"></span><span class="nav__text" data-i18n="nav_about">About</span>
+      </a>
+      <a href="pages/portfolio/portfolio.html" class="nav__link">
+        <span class="nav__bar"></span><span class="nav__text" data-i18n="nav_portfolio">Portfolio</span>
+      </a>
+      <a href="pages/contact/contact.html" class="nav__link is-active">
+        <span class="nav__bar"></span><span class="nav__text" data-i18n="nav_contact">Contact</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="page page--center">
+      <h1 class="page__title page__title--reveal"><span class="reveal"><span class="reveal__inner" data-i18n-html="contact_title">Get in <span class="accent">touch</span></span></span></h1>
+      <p class="page__text" data-i18n="contact_desc">Have a project in mind? Let's talk.</p>
+
+      <div class="contact">
+        <a href="https://discord.gg/cdT5g5xsVq" class="contact-card" target="_blank" rel="noopener">
+          <span class="contact-card__type">Server</span>
+          <span class="contact-card__name">Discord</span>
+          <span class="contact-card__handle">discord.gg/cdT5g5xsVq</span>
+        </a>
+        <a href="https://discordapp.com/users/476508251996028940" class="contact-card" target="_blank" rel="noopener">
+          <span class="contact-card__type">User</span>
+          <span class="contact-card__name">Discord</span>
+          <span class="contact-card__handle">Send a DM</span>
+        </a>
+        <a href="https://x.com/ssenkex" class="contact-card" target="_blank" rel="noopener">
+          <span class="contact-card__type">Social</span>
+          <span class="contact-card__name">Twitter / X</span>
+          <span class="contact-card__handle">@ssenkex</span>
+        </a>
+        <a href="https://github.com/senkex" class="contact-card" target="_blank" rel="noopener">
+          <span class="contact-card__type">Code</span>
+          <span class="contact-card__name">GitHub</span>
+          <span class="contact-card__handle">github.com/senkex</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__col">
+        <h4 class="footer__title" data-i18n="footer_about_title">About</h4>
+        <p class="footer__text" data-i18n="footer_about_text">
+          Always focused on quality
+        </p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title" data-i18n="footer_follow">Follow</h4>
+        <a href="https://x.com/ssenkex" class="footer__link" target="_blank" rel="noopener">Twitter / X</a>
+        <a href="https://github.com/senkex" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://discord.gg/cdT5g5xsVq" class="footer__link" target="_blank" rel="noopener">Discord</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title" data-i18n="footer_legal">Legal</h4>
+        <a href="pages/legal/privacy-policy.html" class="footer__link" data-i18n="legal_privacy">Privacy Policy</a>
+        <a href="pages/legal/terms-of-service.html" class="footer__link" data-i18n="legal_terms">Terms of Service</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <button class="lang" id="langToggle">Language: English (Click to change)</button>
+      <p class="footer__place">Argentina <span class="footer__time">— 00:00</span></p>
+      <p class="footer__copy">© Senkex — <span data-i18n="footer_rights">All rights reserved</span></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
+</body>
+</html>

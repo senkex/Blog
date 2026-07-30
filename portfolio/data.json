@@ -1,0 +1,12 @@
+{
+  "github": "aquatic-studios",
+  "githubExclude": ["docs", "Issues"],
+  "websites": [
+    {
+      "title": "Example Website",
+      "url": "https://example.com",
+      "description": "Example website preview.",
+      "tags": ["HTML", "CSS", "JS"]
+    }
+  ]
+}
